@@ -42,4 +42,21 @@ int main() {
         }
 
         if (event == 0)
-            std::cout << "S
+            std::cout << "Stable environment detected.\n";
+        else if (event == 1)
+            std::cout << "Energy fluctuation observed.\n";
+        else
+            std::cout << "Optimal travel conditions.\n";
+
+        showState(energy, distance);
+    }
+
+    std::cout << "\nJourney Finished\n";
+
+    if (distance >= 60)
+        std::cout << "Exploration successful!\n";
+    else
+        std::cout << "Travel ended early.\n";
+
+    return 0;
+}
